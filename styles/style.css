@@ -1,0 +1,321 @@
+/* font-family: 'Spartan', sans-serif; */
+/* || General style rules */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+/* This as the class implies hide the lement visually */
+.hide-visually {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute!important;
+  border: 0!important;
+  padding: 0!important;
+  margin: 0!important;
+  clip: rect(1px,1px,1px,1px);
+}
+
+/* || Typography */
+
+body {
+  font-size: 10px;
+  line-height: 1.5;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 400;
+}
+
+.section-social h2 {
+  font-size: 2.19rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  text-align: center;
+  line-height: initial;
+}
+
+.section-social .wrapper-para p {
+  font-size: 1rem;
+  color: hsl(303, 10%, 53%);
+  font-weight: 400;
+  text-align: center;
+}
+
+.section-social .card-star span, 
+.section-social .card-review span, 
+.section-social .card-review p {
+  font-size: 0.9375rem;
+}
+
+.section-social .card-star span {
+  font-weight: 700;
+}
+
+.section-social .reviewer-detail div:first-child span {
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+}
+
+.section-social .card-star span {
+  color: hsl(300, 43%, 22%);
+}
+
+.section-social .reviewer-detail div:last-child span {
+  color: hsla(333, 80%, 67%, 70%);
+}
+
+.section-social .card-review p {
+  color: hsl(300, 24%, 96%);
+}
+
+/* || Layout */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/bg-pattern-top-mobile.svg) left top / 100% no-repeat, 
+  url(../images/bg-pattern-bottom-mobile.svg) right bottom / 100% no-repeat,  
+  white;
+}
+
+footer {
+  flex: 0;
+}
+
+/* || Section Social */
+
+.section-social {
+  width: 88%;
+  margin: 8em auto;
+  max-width: 111em;
+}
+
+.section-social .wrapper-para p {
+  margin-bottom: 2.5em;
+}
+
+.section-social .wrapper-card-star {
+  margin-bottom: 5em;
+}
+
+.section-social .card-star {
+  border-radius: 5px;
+  background-color: hsl(300, 24%, 96%);
+  margin: 1.7em auto;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 44em;
+}
+
+.section-social .wrapper-stars {
+  margin: 0 3.2em 1.5em 1.2em;
+}
+
+.section-social .wrapper-stars img {
+  margin-right: 0.7em;
+}
+
+.section-social .wrapper-stars img:last-child {
+  margin-right: 0;
+}
+
+.section-social .wrapper-review {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5em;
+  column-gap: 3em;
+}
+
+.section-social .card-review {
+  background-color: hsl(300, 43%, 22%);
+  padding: 3.5em 3em;
+  max-width: 35em;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.section-social .wrapper-reviewer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.section-social .wrapper-reviewer img {
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  margin-right: 2.2em;
+}
+
+.section-social .card-review p {
+  margin: 0;
+}
+
+/* Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+@media screen and (min-width: 30.8em) {
+
+  /* || Section social */
+
+  .section-social .card-star {
+    justify-content: flex-start;
+  }
+
+  .section-social .wrapper-stars {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 49.1em) {
+
+  /* || Section social */
+
+  .section-social .card-review {
+    margin: 0;
+  }
+}
+
+
+@media screen and (min-width: 51.875em) {
+
+  /* || Section social */
+  .section-social .wrapper-review {
+    grid-template-columns: repeat(auto-fill, minmax(33em, 35em));
+  }
+}
+
+/* || Media query for Desktops/large screens breakpoint */
+
+@media screen and (min-width: 64.0625em) {
+
+  /* || Layout */
+
+  main {
+    background: url(../images/bg-pattern-top-desktop.svg) left top / 40% no-repeat, 
+    url(../images/bg-pattern-bottom-desktop.svg) right bottom / 70% no-repeat,  
+    white;
+  }
+
+  /* || Section social */
+
+  .section-social {
+    display: grid;
+    grid-template-columns: 49em minmax(auto, 7.7em) auto;
+    row-gap: 3em;
+  }
+
+  .section-social .wrapper-para {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .section-social .wrapper-card-star {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .section-social .wrapper-review {
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+
+  .section-social .wrapper-card-star {
+    margin: auto 0;
+  }
+
+  .section-social h2 {
+    font-size: 3.2rem;
+    margin-bottom: 0;
+  }
+
+  .section-social h2, 
+  .section-social .wrapper-para p {
+    text-align: left;
+  }
+
+  .section-social .card-star {
+    justify-content: center;
+  }
+  
+  .section-social .wrapper-stars {
+    margin: 0 3.2em 1.5em 1.2em;
+  }
+
+  .section-social .card-star {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (min-width: 71.125em) {
+
+  /* || Section social */
+
+  .section-social .card-star {
+    justify-content: flex-start;
+  }
+
+  .section-social .wrapper-stars {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 78.625em) {
+  
+  /* || Section social */
+
+  .section-social .card-star {
+    margin-right: 0;
+    margin-left: 0;
+    position: relative;
+  }
+  
+  .section-social .wrapper-card-star > :nth-child(2) {
+    left: 5em;
+  }
+
+  .section-social .wrapper-card-star  > :nth-child(3) {
+    left: 10em;
+  }
+}
+
+@media screen and (min-width: 78.625em) {
+
+  /* || Section social */
+
+  .section-social .wrapper-review  > :nth-child(2) {
+    position: relative;
+    top: 1.5em;
+  }
+
+  .section-social .wrapper-review  > :nth-child(3) {
+    position: relative;
+    top: 3em;
+  }
+}
